@@ -16,3 +16,5 @@ jobs:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Internal NuGet Solution Master Workflow.yml@RC
     with:
       sonarCloudProjectName: SkylineCommunications_BOOST-DailyRegression-InternalNuGet
+    secrets:
+      nugetApiKey: ${{ secrets.NUGETAPIKEY_GITHUB }}
