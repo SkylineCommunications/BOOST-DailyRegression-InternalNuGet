@@ -13,3 +13,11 @@ jobs:
       workflow-name: rc-nuget-ci-cd.yml
     secrets:
       msteams-webhook: ${{ secrets.TEAMS_WEBHOOK }}
+
+  regression-oidc:
+    uses: SkylineCommunications/BOOST-DailyRegression/.github/workflows/regression.yml@main
+    with:
+      workflow-name: rc-nuget-ci-cd-oidc.yml
+      job-number: 1
+    secrets:
+      msteams-webhook: ${{ secrets.TEAMS_WEBHOOK }}
