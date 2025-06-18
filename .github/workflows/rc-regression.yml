@@ -1,9 +1,6 @@
 name: RC Regression
 
 on:
-  schedule: 
-    - cron: '0 5 * * *' # every day at 07:00 UTC
-
   workflow_dispatch: # Run manually
 
 jobs:
@@ -15,6 +12,7 @@ jobs:
       msteams-webhook: ${{ secrets.TEAMS_WEBHOOK }}
 
   regression-oidc:
+    needs: regression
     uses: SkylineCommunications/BOOST-DailyRegression/.github/workflows/regression.yml@main
     with:
       workflow-name: rc-nuget-ci-cd-oidc.yml
