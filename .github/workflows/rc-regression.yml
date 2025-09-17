@@ -8,6 +8,7 @@ jobs:
     uses: SkylineCommunications/BOOST-DailyRegression/.github/workflows/regression.yml@main
     with:
       workflow-name: rc-nuget-ci-cd.yml
+      job-number: 0
     secrets:
       msteams-webhook: ${{ secrets.TEAMS_WEBHOOK }}
 
